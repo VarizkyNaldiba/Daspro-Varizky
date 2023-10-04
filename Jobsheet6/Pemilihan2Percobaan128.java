@@ -10,10 +10,12 @@ public class Pemilihan2Percobaan128 {
         tahun=input28.nextInt();
 
         if (( tahun % 4 ) == 0 ) {
-            if (( tahun % 100 ) != 0);
-                if ( tahun % 400 == 0 )
-                System.out.println(" Tahun" + tahun + " Merupakan Tahun Kabisat");
-        } else 
-                System.out.println(" Tahun" + tahun + "Bukan Tahun Kabisat");
+            if (( tahun % 100 ) == 0) {
+                System.out.println(" Merupakan Tahun Kabisat");
+            }
+        } else {
+                System.out.println("Bukan Tahun Kabisat");
+
+        }
     }  
 }
