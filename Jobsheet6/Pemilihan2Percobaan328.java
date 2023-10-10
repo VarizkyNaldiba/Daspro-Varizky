@@ -1,4 +1,4 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
 public class Pemilihan2Percobaan328 {
     public static void main(String[] args) {
