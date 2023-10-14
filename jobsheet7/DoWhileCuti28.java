@@ -26,7 +26,7 @@ public class DoWhileCuti28 {
                     continue;
 
                 }
-            }
+            } break; 
         } while (jatahCuti != 0);
     }    
 }
