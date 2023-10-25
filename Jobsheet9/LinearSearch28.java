@@ -20,10 +20,15 @@ public class LinearSearch28 {
         int hasil = -1;
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i] == key) {
-                hasil = i + 1;
+                hasil = i;
                 break;
             }
         }
-            System.out.println("Key ada di posisi indeks " + hasil);  
+
+        if (hasil == -1) {
+            System.out.println("Key tidak ditemukan dalam array");
+        } else {
+            System.out.println("Key ada dalam array pada posisi indeks ke-" + hasil);
+        }
     }
 }
