@@ -19,11 +19,12 @@ public class Bioskop28 {
         System.out.printf("%s \t %s\n", penonton[2][0], penonton[2][1]);
         System.out.printf("%s \t %s\n", penonton[3][0], penonton[3][1]);
 
-        System.out.println(penonton.length);
+        System.out.println("Penonton pada baris ke-3: ");
 
-        for (String[] barisPenonton : penonton) {
-            System.out.println("Panjang baris : " + barisPenonton.length);
+        for (int i = 0; i < penonton[2].length;i++) {
+            System.out.println(penonton[2][i]);
         }
-
     }
 }
+
+
