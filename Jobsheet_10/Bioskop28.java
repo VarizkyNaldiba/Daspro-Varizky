@@ -1,5 +1,3 @@
-package Jobsheet_10;
-
 public class Bioskop28 {
     public static void main(String[] args) {
 
