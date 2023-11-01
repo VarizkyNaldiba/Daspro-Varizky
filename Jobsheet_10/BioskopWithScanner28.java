@@ -7,27 +7,47 @@ public class BioskopWithScanner28 {
         int baris, kolom;
         String nama, next;
 
-        String [][] penonton =  new String [4][2];
+        String[][] penonton = new String[4][2];
 
         while (true) {
-            System.out.println("Masukkan nama : ");
-            nama = sc.nextLine();
-            System.out.println("Masukkan baris : ");
-            baris = sc.nextInt();
-            System.out.println("Masukkan kolom : ");
-            kolom = sc.nextInt();
+            System.out.println("Menu:");
+            System.out.println("1. Input data penonton");
+            System.out.println("2. Tampilkan daftar penonton");
+            System.out.println("3. Exit");
+            System.out.println("Pilih menu: ");
+            int menu = sc.nextInt();
             sc.nextLine();
 
-            penonton[baris-1] [kolom-1] = nama;
+            
+            switch (menu) {
+                case 1:
+                    System.out.println("Masukkan nama : ");
+                    nama = sc.nextLine();
+                    System.out.println("Masukkan baris : ");
+                    baris = sc.nextInt();
+                    System.out.println("Masukkan kolom : ");
+                    kolom = sc.nextInt();
+                    sc.nextLine();
 
-            System.out.println("Input penonton lainnya ? y/n : ");
-            next = sc.nextLine();
-                
-            if (next.equalsIgnoreCase("n")) {
-                break;
+                    penonton[baris - 1][kolom - 1] = nama;
+                    break;
 
+                case 2:
+                    System.out.println("Daftar penonton:");
+                    for (int i = 0; i < penonton.length; i++) {
+                        for (int j = 0; j < penonton[i].length; j++) {
+                            if (penonton[i][j] != null) {
+                                System.out.println("Baris " + (i + 1) + ", Kolom " + (j + 1) + ": " + penonton[i][j]);
+                            }
+                        }
+                    }
+                    break;
+
+                case 3:
+                    default:
+                    System.out.println("Menu tidak valid");
+                    break;
             }
-
-        }
+        } 
     }
 }
