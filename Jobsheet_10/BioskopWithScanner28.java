@@ -5,7 +5,7 @@ public class BioskopWithScanner28 {
         Scanner sc = new Scanner(System.in);
 
         int baris, kolom;
-        String nama, next, bug;
+        String nama, next;
         int menu = 0;
 
         String[][] penonton = new String[4][2];
@@ -19,10 +19,10 @@ public class BioskopWithScanner28 {
 
             menu = sc.nextInt();
             sc.nextLine();
-// Menu
+
             switch (menu) {
                 case 1:
- // case 1                  
+                    do {
                         System.out.println("Masukkan nama : ");
                         nama = sc.nextLine();
                         System.out.println("Masukkan baris : ");
@@ -42,25 +42,24 @@ public class BioskopWithScanner28 {
                         } 
 
                         penonton[baris - 1][kolom - 1] = nama;
-                        break;
-// case 2
+                    } while (true);
+                    break;
+
                 case 2:
                     System.out.println("Daftar penonton:");
                     for (int i = 0; i < penonton.length; i++) {
-                       for (int j = 0; j < penonton[i].length; j++) {
+                        for (int j = 0; j < penonton[i].length; j++) {
                             if (penonton[i][j] != null) {
                                 System.out.println("Baris " + (i + 1) + ", Kolom " + (j + 1) + ": " + penonton[i][j]);
-                            } else 
-                                System.out.println("Baris " + (i + 1) + ", Kolom " + (j + 1) + ": " + "***");
-
+                            }
                         }
                     }
                     break;
-// case 3 
+
                 case 3:
                     System.out.println("Anda Keluar dari Menu");
                     break;
-// default
+
                 default:
                     System.out.println("Menu tidak tersedia");
                     break;
