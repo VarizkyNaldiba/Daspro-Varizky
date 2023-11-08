@@ -12,19 +12,19 @@ public class Quiz {
             int number = random.nextInt(10) + 1;
             boolean success = false;
             do {
-                System.out.println("Tebak Angka (1 - 10) : ");
+                System.out.print("Tebak Angka (1 - 10) : ");
                 int answer = sc.nextInt();
                 sc.nextLine();
                 if (answer > number) {
-                    System.out.println("Angka yang Anda masukkan terlalu besar.");
+                    System.out.print("Angka yang Anda masukkan terlalu besar.");
                 } else if (answer < number) {
-                    System.out.println("Angka yang Anda masukkan terlalu kecil.");
+                    System.out.print("Angka yang Anda masukkan terlalu kecil.");
                 } else {
                     success = true;
                 }
             } while (!success);
-            System.out.println("Jawaban Anda Benar");
-            System.out.println("Apakah anda ingin mengulang permainan (Y/t) ? ");
+            System.out.print("Jawaban Anda Benar");
+            System.out.print("Apakah anda ingin mengulang permainan (Y/t) ? ");
             menu = sc.nextLine().charAt(0);
         }while (menu == 'y' || menu == 'Y');
     }
