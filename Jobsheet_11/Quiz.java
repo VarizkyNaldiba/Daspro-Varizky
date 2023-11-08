@@ -15,9 +15,16 @@ public class Quiz {
                 System.out.println("Tebak Angka (1 - 10) : ");
                 int answer = sc.nextInt();
                 sc.nextLine();
-                success = (answer == number);
+                if (answer > number) {
+                    System.out.println("Angka yang Anda masukkan terlalu besar.");
+                } else if (answer < number) {
+                    System.out.println("Angka yang Anda masukkan terlalu kecil.");
+                } else {
+                    success = true;
+                }
             } while (!success);
-            System.out.println("Apakah anda ingin mengulang permainan (Y/y) ? ");
+            System.out.println("Jawaban Anda Benar");
+            System.out.println("Apakah anda ingin mengulang permainan (Y/t) ? ");
             menu = sc.nextLine().charAt(0);
         }while (menu == 'y' || menu == 'Y');
     }
