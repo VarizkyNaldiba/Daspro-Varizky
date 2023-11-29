@@ -63,4 +63,3 @@ public class Tugas2 {
         return mahasiswa[index];
     }
 }
-s

@@ -6,10 +6,10 @@ public class Percobaan2 {
             System.out.print("1 = ");
             return 1;
         } else if (y == 1) {
-            System.out.print(x + " = ");
+            System.out.print(x + " x 1 " + " = ");
             return x;
         } else {
-            System.out.print(x + "x");
+            System.out.print(x + " x ");
             return x * hitungPangkat(x, y - 1);
         }
     }
